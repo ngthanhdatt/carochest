@@ -38,9 +38,9 @@ public class StartPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent ae) {
              
-                if (GamePanel.canPlaySound) {
-                    mySound.playSound("sound/coin.mp3"); // phát âm thanh
-                }
+//                if (GamePanel.canPlaySound) {
+//                    mySound.playSound("sound/coin.mp3"); // phát âm thanh
+//                }
                 // chương trình gỡ bỏ chế độ  START MENU, thay vào là chế độ GAME 1 người chơi
                 Main.myFrame.remove(Main.myStartPanel);
                 Main.myGamePanel = new GamePanel();
@@ -52,33 +52,33 @@ public class StartPanel extends JPanel {
         });
         
 // thêm hành động cho button "2 player" : chế độ 2 người chơi trên cùng một máy 
-        twoButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-            
-                if (GamePanel.canPlaySound) {
-                    mySound.playSound("sound/coin.mp3"); // âm thanh 
-                }
-                /* chương trình gỡ bỏ chế độ  START MENU : 
-                 thay vào là chế độ GAME 2 người chơi */
-                Main.myFrame.remove(Main.myStartPanel);
-                Main.myGamePanel = new GamePanel();
-                Main.myGamePanel.numberPlayer = 2;
-                Main.myFrame.add(Main.myGamePanel);
-                Main.myFrame.repaint();
-
-            }
-        });
+//        twoButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//            
+//                if (GamePanel.canPlaySound) {
+//                    mySound.playSound("sound/coin.mp3"); // âm thanh 
+//                }
+//                /* chương trình gỡ bỏ chế độ  START MENU : 
+//                 thay vào là chế độ GAME 2 người chơi */
+//                Main.myFrame.remove(Main.myStartPanel);
+//                Main.myGamePanel = new GamePanel();
+//                Main.myGamePanel.numberPlayer = 2;
+//                Main.myFrame.add(Main.myGamePanel);
+//                Main.myFrame.repaint();
+//
+//            }
+//        });
 
         /* thêm hành động cho LAN GAME button : 
-         2 người chơi kết nối 2 máy qua mạng LAN  */
+         /*2 người chơi kết nối 2 máy qua mạng LAN  */
         LANButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
-                if (GamePanel.canPlaySound) {
-                    mySound.playSound("sound/coin.mp3"); // âm thanh 
-                }
+//                if (GamePanel.canPlaySound) {
+//                    mySound.playSound("sound/coin.mp3"); // âm thanh 
+//                }
                 /* chương trình gỡ bỏ chế độ  START MENU, 
                  thay vào là menu kết nối mạng LAN 
                  */

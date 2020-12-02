@@ -91,9 +91,9 @@ public class GamePanel extends JPanel {
         myAction = new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (canPlaySound) {
-                    mySound.playSound("sound/kick.mp3");
-                }
+//                if (canPlaySound) {
+//                    mySound.playSound("sound/kick.mp3");
+//                }
 
                 if (Main.startGame == true) {
                     Main.myFrame.repaint();

@@ -32,16 +32,16 @@ public class Main {
         myFrame.setBounds(100, 100, 800, 600);
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // nhạc nền 
-        MusicPanel myMusicPanel = new MusicPanel();
-        myFrame.add(myMusicPanel);
-
-        // âm thanh 
-        SoundPanel mySoundPanel = new SoundPanel();
-
-        // thêm button  nhạc nền và âm thanh vào Frame chính 
-        myFrame.add(mySoundPanel);
-        myFrame.repaint();
+//        // nhạc nền 
+//        MusicPanel myMusicPanel = new MusicPanel();
+//        myFrame.add(myMusicPanel);
+//
+//        // âm thanh 
+//        SoundPanel mySoundPanel = new SoundPanel();
+//
+//        // thêm button  nhạc nền và âm thanh vào Frame chính 
+//        myFrame.add(mySoundPanel);
+//        myFrame.repaint();
 
         // khởi chạy menu start game 
         myFrame.add(myStartPanel);
