@@ -13,9 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /*
- *
- * @author VanNinh
- *
  * Client gửi các tin nhắn đến server: 
     MOVE
     QUIT
@@ -42,7 +39,7 @@ public class Client {
     private ImagePanel currentSquare;
     public static BackButton myBackButton;
 
-    public SoundPlayer mySoundPlayer = new SoundPlayer();
+
     /*
       Các thuộc tính kết nối server :
      
@@ -99,11 +96,6 @@ public class Client {
 
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                      // play sound 
-
-                        if (GamePanel.canPlaySound) {
-                            mySoundPlayer.playSound("sound/kick.mp3");
-                        }
 
                         currentSquare = board[k][l];
 
@@ -192,11 +184,8 @@ public class Client {
                     messageLabel.setText("Đối thủ đã đi , đến lượt bạn");
 
                 } else if (response.startsWith("VICTORY")) {
-                       // âm thanh 
-                    if (GamePanel.canPlaySound) {
-                        mySoundPlayer.playSound("sound/win.mp3");
-                    }
-                    
+
+//                    
                     // bảng thông báo
                     Icon myIcon = new ImageIcon(getClass().getResource("picture/winner" + (mark == 'X' ? '1' : '2') + ".gif"));
                     JOptionPane.showMessageDialog(null, null, "Chiến thắng!", JOptionPane.INFORMATION_MESSAGE, myIcon);
@@ -207,17 +196,13 @@ public class Client {
                     break;
                 } else if (response.startsWith("DEFEAT")) {
                     messageLabel.setText("Bạn đã bị đánh bại");
-                    // âm thanh 
-                    if (GamePanel.canPlaySound) {
-                        mySoundPlayer.playSound("sound/GameOver.mp3");
-                    }
-                    
+
+//                    
                     // bảng thông báo
                     Icon myIcon = new ImageIcon(getClass().getResource("picture/loser" + (mark == 'X' ? '1' : '2') + ".gif"));
                     JOptionPane.showMessageDialog(null, null, "Thua!", JOptionPane.INFORMATION_MESSAGE, myIcon);
 
                   
-                    // 
 
                     Main.myFrame.repaint();
                     break;

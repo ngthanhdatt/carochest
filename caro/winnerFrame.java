@@ -6,10 +6,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-/**
- *
- * @author VanNinh
- */
 public class winnerFrame extends JFrame {
    
     public winnerFrame(int winner ) { 
@@ -36,15 +32,6 @@ public class winnerFrame extends JFrame {
         JButton acceptButton = new JButton("Xác nhận") ; 
         acceptButton.setBounds(150, 170, 90, 25);
         
-        SoundPlayer mySound = new SoundPlayer() ; // âm thanh 
-        if(GamePanel.winner==0 && GamePanel.canPlaySound) { 
-             mySound.playSound("sound/draw.mp3" );
-        }
-        else if( GamePanel.winner==3 && GamePanel.canPlaySound )  { // computer win 
-              mySound.playSound("sound/GameOver.mp3" );
-        }
-        else if(  (GamePanel.winner==1 || GamePanel.winner==2) && GamePanel.canPlaySound )
-             mySound.playSound("sound/win.mp3" );
        
         acceptButton.addActionListener(new ActionListener() {
 
@@ -64,10 +51,7 @@ public class winnerFrame extends JFrame {
         repaint() ;
           
         add(winnerPicture) ; 
-     
-   
-        
-       // repaint(); 
+     ; 
     }
     
     

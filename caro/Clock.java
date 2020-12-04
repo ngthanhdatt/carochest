@@ -1,9 +1,6 @@
 package caro;
 
-/**
- *
- * @author VanNinh
- */
+
 public class Clock {
 
     public boolean isRunning;

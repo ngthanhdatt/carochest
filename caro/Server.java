@@ -7,10 +7,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- *
- * @author VanNinh
- */
+
 public class Server {
 
     /*
@@ -76,9 +73,7 @@ public class Server {
 
    
 
-    /**
-     * A two-player game.
-     */
+
     public class Game {
 
         /*

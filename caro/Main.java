@@ -1,9 +1,8 @@
 package caro;
 
-/*
- @author VanNinh Main.java : là đối tượng chạy chính , quyết định "cảnh game"
+/*Main.java : là đối tượng chạy chính , quyết định "cảnh game"
   hiện hành
- 
+
  */
 import javax.swing.JFrame;
 import javax.swing.UIManager;
@@ -31,18 +30,7 @@ public class Main {
         myFrame.setLayout(null);
         myFrame.setBounds(100, 100, 800, 600);
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-//        // nhạc nền 
-//        MusicPanel myMusicPanel = new MusicPanel();
-//        myFrame.add(myMusicPanel);
-//
-//        // âm thanh 
-//        SoundPanel mySoundPanel = new SoundPanel();
-//
-//        // thêm button  nhạc nền và âm thanh vào Frame chính 
-//        myFrame.add(mySoundPanel);
-//        myFrame.repaint();
-
+        
         // khởi chạy menu start game 
         myFrame.add(myStartPanel);
 
@@ -51,7 +39,7 @@ public class Main {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
 
-        try { // sử Jato libary có chức năng thay đổi giao diện game đẹp hơn 
+        try { 
             UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
         } catch (Exception e) {
         };
